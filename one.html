@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js events</title>
+</head>
+<body>
+    <h2>welcome to programming website</h2>
+    <button id="closebtn">close</button>
+
+    
+    <script>
+        const buyBook = function(){document.querySelector("h2").innerHTML = "would to like to buy books just at Rs.399"}
+        const nameCall = function(){console.log("hello balkrishna")}
+        const nameTime = setTimeout(nameCall, 2000)
+        const changeme = setTimeout(buyBook, 2000)
+        document.querySelector("#closebtn").addEventListener("click",
+        function()
+        {clearTimeout(changeme)
+        console.log("stopped")})
+    </script>
+</body>
+</html>
